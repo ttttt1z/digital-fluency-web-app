@@ -1044,10 +1044,12 @@ function AdminDashboard({ onBack, theme, onToggleTheme }: { onBack: () => void; 
                     <h2 className="text-lg font-extrabold tracking-tight text-[var(--text)] uppercase flex items-center gap-2">
                       Safety Posture Dashboard
                       <span className={cn("px-2 py-0.5 rounded-full border",
-                        stats?.isVulnerable
-                          ? 'bg-red-500/10 border-red-500/20 text-[#d63939]'
-                          : 'bg-[#1ABB9C]/10 border-[#1ABB9C]/20 text-[#1ABB9C]' )}>
-                        {stats?.isVulnerable ? '⚠ Vulnerable' : '✓ Good'}
+  stats?.isVulnerable 
+    ? 'bg-red-500/10 border-red-500/20 text-[#d63939]' 
+    : 'bg-[#1ABB9C]/10 border-[#1ABB9C]/20 text-[#1ABB9C]'
+)}>
+  {stats?.isVulnerable ? '⚠ Vulnerable' : '✓ Good'}
+</span>
                       </span>
                     </h2>
                     <p className="text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-wider">
