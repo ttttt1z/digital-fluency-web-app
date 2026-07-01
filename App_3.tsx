@@ -1047,7 +1047,7 @@ function AdminDashboard({ onBack, theme, onToggleTheme }: { onBack: () => void; 
                         stats?.isVulnerable
                           ? 'bg-red-500/10 border-red-500/20 text-[#d63939]'
                           : 'bg-[#1ABB9C]/10 border-[#1ABB9C]/20 text-[#1ABB9C]' )}>
-                        {stats?.isVulnerable? '⚠ Vulnerable' : '✓ Good'}
+                        {stats?.isVulnerable ? '⚠ Vulnerable' : '✓ Good'}
                       </span>
                     </h2>
                     <p className="text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-wider">
