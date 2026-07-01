@@ -1039,7 +1039,7 @@ function AdminDashboard({ onBack, theme, onToggleTheme }: { onBack: () => void; 
               <motion.div key="dash" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
                 
                 {/* ─── Dashboard Header with Small Status Badge (Realistic SaaS style) ──── */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className=" flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div className="flex flex-col gap-0.5">
                     <h2 className="text-lg font-extrabold tracking-tight text-[var(--text)] uppercase flex items-center gap-2">
                       Safety Posture Dashboard
@@ -1047,7 +1047,7 @@ function AdminDashboard({ onBack, theme, onToggleTheme }: { onBack: () => void; 
                         stats.isVulnerable ?? false
                           ? 'bg-red-500/10 border-red-500/20 text-[#d63939]'
                           : 'bg-[#1ABB9C]/10 border-[#1ABB9C]/20 text-[#1ABB9C]')}>
-                        {stats && stats.isVulnerable ? '⚠ Vulnerable' : '✓ Good'}
+                        {stats && stats.isVulnerable? '⚠ Vulnerable' : '✓ Good'}
                       </span>
                     </h2>
                     <p className="text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-wider">
