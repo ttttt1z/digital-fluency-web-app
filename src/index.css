@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1ABB9C;
+  --primary-hover: #169f85;
+  --sidebar-bg: #1a2332;
+  --sidebar-text: #7b8fa3;
+  --sidebar-text-hover: #c5d0dc;
+  --sidebar-text-active: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.06);
+  --body-bg: #f5f7fb;
+  --bg-surface: #ffffff;
+  --bg-surface-secondary: #f9fafb;
+  --border-color: #e6e7eb;
+  --text: #1e2633;
+  --text-secondary: #626d7d;
+  --text-muted: #7e8896;
+}
+
+[data-theme="dark"] {
+  --body-bg: #0f1623;
+  --bg-surface: #1a2332;
+  --bg-surface-secondary: #141d2b;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --text: #e6ebf2;
+  --text-secondary: #b3bccb;
+  --text-muted: #8a93a3;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body, #root {
+    margin: 0;
+    min-height: 100%;
+    background: var(--body-bg);
+    color: var(--text);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  body {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  button, input, select, textarea {
+    font: inherit;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(15, 23, 42, 0.74);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+  }
+
+  .frosted-card {
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 0.82));
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.32);
+  }
+}
+
